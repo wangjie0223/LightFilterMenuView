@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LightFilterMenuView'
-  s.version          = '0.2.0'
+  s.version          = '0.3.0'
   s.summary          = '轻量筛选'
 
   # swift version
@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/wangjie0223/LightFilterMenuView.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '13.0'
 
   s.source_files = 'LightFilterMenuView/Classes/**/*'
   
