@@ -29,8 +29,8 @@
 
 /* Begin PBXFileReference section */
 		16A43C0F1966167ACABFFCDA /* Pods_LightFilterMenuView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LightFilterMenuView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		228EA0A00A883C0CD7B2205B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		4AC93419317D689B1AFCF929 /* LightFilterMenuView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = LightFilterMenuView.podspec; path = ../LightFilterMenuView.podspec; sourceTree = "<group>"; };
+		228EA0A00A883C0CD7B2205B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		4AC93419317D689B1AFCF929 /* LightFilterMenuView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LightFilterMenuView.podspec; path = ../LightFilterMenuView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		58CEDCAC8738AC94DF93245A /* Pods-LightFilterMenuView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightFilterMenuView_Example.release.xcconfig"; path = "Target Support Files/Pods-LightFilterMenuView_Example/Pods-LightFilterMenuView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* LightFilterMenuView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LightFilterMenuView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		9C38EC4275C84027AC24AE5C /* Pods-LightFilterMenuView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightFilterMenuView_Tests.debug.xcconfig"; path = "Target Support Files/Pods-LightFilterMenuView_Tests/Pods-LightFilterMenuView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E1A3C3F19EE427CD44CDBD95 /* Pods_LightFilterMenuView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LightFilterMenuView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E413BF35BF0AD5A6227317B6 /* Pods-LightFilterMenuView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightFilterMenuView_Example.debug.xcconfig"; path = "Target Support Files/Pods-LightFilterMenuView_Example/Pods-LightFilterMenuView_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		E9D0D3D9B76B7D2220E4F889 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		E9D0D3D9B76B7D2220E4F889 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +147,6 @@
 				9C38EC4275C84027AC24AE5C /* Pods-LightFilterMenuView_Tests.debug.xcconfig */,
 				99240CD8AE735399012C411C /* Pods-LightFilterMenuView_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -484,7 +484,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -499,7 +499,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

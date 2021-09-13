@@ -1,0 +1,16 @@
+PODS:
+  - LightFilterMenuView (0.1.0)
+
+DEPENDENCIES:
+  - LightFilterMenuView (from `../`)
+
+EXTERNAL SOURCES:
+  LightFilterMenuView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LightFilterMenuView: b048fdb4644492df421223ecac6129f7d51edb77
+
+PODFILE CHECKSUM: af4dfeeedbf0b94c858a12c2bda2539a0ac90142
+
+COCOAPODS: 1.10.0

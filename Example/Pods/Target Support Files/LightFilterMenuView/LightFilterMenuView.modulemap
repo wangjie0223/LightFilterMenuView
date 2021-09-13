@@ -1,0 +1,6 @@
+framework module LightFilterMenuView {
+  umbrella header "LightFilterMenuView-umbrella.h"
+
+  export *
+  module * { export * }
+}

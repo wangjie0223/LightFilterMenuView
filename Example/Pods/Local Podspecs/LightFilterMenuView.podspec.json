@@ -1,0 +1,22 @@
+{
+  "name": "LightFilterMenuView",
+  "version": "0.1.0",
+  "summary": "A short description of LightFilterMenuView.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/wangjie0223/LightFilterMenuView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "wangjie0223": "wangjie7629@163.com"
+  },
+  "source": {
+    "git": "https://github.com/wangjie0223/LightFilterMenuView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "LightFilterMenuView/Classes/**/*"
+}
