@@ -212,10 +212,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = F896KV7CDX;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = F896KV7CDX;
 						LastSwiftMigration = 1250;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -485,6 +487,7 @@
 			baseConfigurationReference = E413BF35BF0AD5A6227317B6 /* Pods-LightFilterMenuView_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F896KV7CDX;
 				INFOPLIST_FILE = LightFilterMenuView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -500,6 +503,7 @@
 			baseConfigurationReference = 58CEDCAC8738AC94DF93245A /* Pods-LightFilterMenuView_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F896KV7CDX;
 				INFOPLIST_FILE = LightFilterMenuView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -514,6 +518,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9C38EC4275C84027AC24AE5C /* Pods-LightFilterMenuView_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = F896KV7CDX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -536,6 +541,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 99240CD8AE735399012C411C /* Pods-LightFilterMenuView_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = F896KV7CDX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",

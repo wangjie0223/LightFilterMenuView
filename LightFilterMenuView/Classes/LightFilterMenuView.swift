@@ -1,67 +1,51 @@
-
-import Foundation
 import UIKit
 
-//open class MyClass {
-//    public static func myfun() {
-//        print("1111")
-//    }
-//}
-
 open class FilterItemModel: NSObject {
-    var id: String?
     public var name: String?
-     var isSel = false
+    var id: String?
+    var isSel = false
 }
 
 open class FilterModel: NSObject {
-     var name: String?
+    public var name: String?
     public var model: [FilterItemModel]?
 }
 
-
-//
-//  FilterMenuView.swift
-//  FilterMenuView
-//
-//  Created by jqrios on 2021/9/11.
-//
-
-@available(iOS 13.0, *)
-let STATUSBAR_HEIGHT = UIApplication.shared.connectedScenes.map({$0 as? UIWindowScene}).compactMap({$0}).first?.windows.first?.windowScene?.statusBarManager?.statusBarFrame.height
-
 public protocol FilterMenuViewDelegate {
-
+    /// 点击某个菜单
+    /// - Parameters:
+    ///   - menuView: menuView
+    ///   - index: 按钮索引
     func selectMenum(menuView: FilterMenuView, at index: Int)
+    
+    /// 点击某个菜单下的某个筛选条件
+    /// - Parameters:
+    ///   - menuView: menuView
+    ///   - menuIndex: 按钮索引
+    ///   - index: 列表索引
     func didSelectConfirm(menuView: FilterMenuView, at menuIndex: Int, at index: Int);
 }
 
-
-
-
 open class FilterMenuView: UIView {
     static let ItemCellId = "item"
-//
-//    /// 标题
-    public var titleArr = [String]()
-//    // 保存 button,用来更新 tab 按钮状态
+    
+    public var dataArr = [FilterModel]()
+    
     var buttonArr = [UIButton]()
-//
+    
     public var delegate: FilterMenuViewDelegate?
+    
     // 用户选中的 tab 索引
     var selectedTabIndex = -1
-
+    
     var tableHeight: CGFloat = 0
-
+    
     public var maxHeight: CGFloat? {
         didSet {
 
         }
     }
-
-    public var dataArr = [FilterModel]()
-//
-    /// 背景颜色
+    
     public var menuViewBgColor: UIColor? {
         set {
             backgroundColor = newValue
@@ -70,31 +54,28 @@ open class FilterMenuView: UIView {
             backgroundColor
         }
     }
-//
-//
+    
     public override init(frame: CGRect) {
         super .init(frame: frame)
         backgroundColor = .white
-
-
-
     }
-
+    
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    // beginShowMenuView
     /// 开始调用以显示
     public func beginShowMenuView() {
         // 第一个按钮距离
-        let buttonInterval = frame.size.width / CGFloat(titleArr.count)
+        let buttonInterval = frame.size.width / CGFloat(dataArr.count)
 
-        for index in 0..<titleArr.count {
-            let button = UIButton.init(type: .system)
-            button.setTitle(titleArr[index], for: .normal)
+        for index in 0..<dataArr.count {
+            let button = UIButton()
+            button.setTitle(dataArr[index].name, for: .normal)
             button.setTitleColor(.lightGray, for: .normal)
             button.setTitleColor(.black, for: .selected)
+            button.setImage(.init(named: "slideup"), for: .normal)
+            button.setImage(.init(named: "slideupDown"), for: .selected)
             addSubview(button)
             button.tag = index;
             let titlePositionX = buttonInterval * CGFloat(index)
@@ -121,42 +102,30 @@ open class FilterMenuView: UIView {
             selectedTabIndex = tapIndex
             animateMenuViewWithShow(show: true)
         }
-
     }
 
     /// 筛选视图显示&关闭
     /// - Parameter show: false 关闭
     func animateMenuViewWithShow(show: Bool) {
         if show {
-
             backGroundView.frame = .init(x: 0, y: self.frame.maxY, width: frame.size.width, height: maxHeight ?? 0)
             superview?.bringSubviewToFront(self)
             superview?.addSubview(backGroundView)
-            backGroundView.backgroundColor = .init(white: 0, alpha: 0.3)
-
+            backGroundView.backgroundColor = .init(white: 0, alpha: 0.5)
             myTableView.frame = .init(x: frame.origin.x, y: self.frame.maxY, width: frame.size.width, height: tableHeight)
             superview?.addSubview(myTableView)
-
             UIView.animate(withDuration: 0.25) {
-
                 let count = self.dataArr[self.selectedTabIndex].model?.count ?? 0
-
                 self.myTableView.frame = .init(x: self.frame.minX, y: self.frame.maxY, width: self.frame.width, height: CGFloat(40*count))
                 self.tableHeight = CGFloat(40*count)
-
-
             }
             myTableView.reloadData()
-
-
             buttonArr.forEach { item in
                 item.isSelected = false
             }
             buttonArr[selectedTabIndex].isSelected = true
-
         } else {
             tableHeight = 0
-
             UIView.animate(withDuration: 0.2) {
                 self.myTableView.frame = .init(x: self.frame.minX, y: self.frame.maxY, width: self.frame.width, height: self.tableHeight)
             } completion: { finish in
@@ -166,7 +135,6 @@ open class FilterMenuView: UIView {
             buttonArr.forEach { item in
                 item.isSelected = false
             }
-
             selectedTabIndex = -1
         }
     }
@@ -181,7 +149,6 @@ open class FilterMenuView: UIView {
         tableV.register(UITableViewCell.self, forCellReuseIdentifier: Self.ItemCellId)
         return tableV
     }()
-
 
     private lazy var backGroundView: UIView = {
         let bgView = UIView()
@@ -217,18 +184,14 @@ extension FilterMenuView: UITableViewDelegate, UITableViewDataSource {
         if let delegate = delegate {
             delegate.didSelectConfirm(menuView: self, at: selectedTabIndex, at: indexPath.row)
         }
-
         guard let model = dataArr[selectedTabIndex].model?[indexPath.row]  else { return }
         dataArr[selectedTabIndex].model?.forEach({ item in
             item.isSel = false
         })
         model.isSel = true
-
         buttonArr[selectedTabIndex].setTitle(dataArr[selectedTabIndex].model?[indexPath.row].name, for: .normal)
-
         animateMenuViewWithShow(show: false)
     }
-
 }
 
 

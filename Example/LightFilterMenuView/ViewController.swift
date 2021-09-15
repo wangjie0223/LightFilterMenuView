@@ -9,14 +9,14 @@
 import UIKit
 import LightFilterMenuView
 
-let STATUSBAR_HEIGHT = UIApplication.shared.connectedScenes.map({$0 as? UIWindowScene}).compactMap({$0}).first?.windows.first?.windowScene?.statusBarManager?.statusBarFrame.height
+let STATUSBAR_HEIGHT = (UIApplication.shared.connectedScenes.map({$0 as? UIWindowScene}).compactMap({$0}).first?.windows.first?.safeAreaInsets.top)!
+let NAV_HEIGHT = STATUSBAR_HEIGHT + 44
 
 class ViewController: UIViewController {
 
     private lazy var menuView: FilterMenuView = {
-        let menu = FilterMenuView.init(frame: .init(x: 0, y: STATUSBAR_HEIGHT! + 100, width: view.frame.width, height: 45))
+        let menu = FilterMenuView.init(frame: .init(x: 0, y: NAV_HEIGHT, width: view.frame.width, height: 45))
         menu.backgroundColor = .white
-        menu.titleArr = ["证型","班型", "科目"]
         menu.delegate = self
         menu.menuViewBgColor = .cyan
         return menu
@@ -25,34 +25,35 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let bgImageView = UIImageView.init(image: .init(named: "IMG_0120"))
-        bgImageView.contentMode = .scaleAspectFill
+        
+        let bgImageView = UIImageView.init(image: .init(named: "picture"))
+        bgImageView.contentMode = .bottom
         bgImageView.frame = view.bounds
+        bgImageView.backgroundColor = .brown
         view.addSubview(bgImageView)
         
         view.addSubview(menuView)
-        menuView.beginShowMenuView()
-        menuView.maxHeight = UIScreen.main.bounds.size.height - STATUSBAR_HEIGHT!
+        menuView.maxHeight = UIScreen.main.bounds.size.height - NAV_HEIGHT
         
-        let stepper = UIStepper.init(frame: .init(x: 10, y: 80, width: 300, height: 100))
+        let stepper = UIStepper.init(frame: .init(x: 10, y: STATUSBAR_HEIGHT, width: 300, height: 100))
         view.addSubview(stepper)
-        stepper.backgroundColor = .white
         stepper.addTarget(self, action: #selector(click(steper:)), for: .valueChanged)
         
-        let stepper2 = UIStepper.init(frame: .init(x: UIScreen.main.bounds.size.width - 100, y: 80, width: 300, height: 100))
+        let stepper2 = UIStepper.init(frame: .init(x: UIScreen.main.bounds.size.width - 100, y: STATUSBAR_HEIGHT, width: 300, height: 100))
         view.addSubview(stepper2)
-        stepper2.backgroundColor = .white
         stepper2.addTarget(self, action: #selector(click2(steper:)), for: .valueChanged)
         
-        let resetButton = UIButton.init(type: .close)
+        let resetButton = UIButton()
         resetButton.backgroundColor = .white
-//        resetButton.setTitle("reset", for: .normal)
+        resetButton.setTitle("重置", for: .normal)
         resetButton.setTitleColor(.black, for: .normal)
-        resetButton.frame = .init(x: stepper.frame.maxX + 50, y: stepper.frame.minY, width: 40, height: 40)
+        resetButton.frame = .init(x: stepper.frame.maxX + 50, y: STATUSBAR_HEIGHT, width: 80, height: 40)
         resetButton.addTarget(self, action: #selector(click3(button:)), for: .touchUpInside)
         view.addSubview(resetButton)
         
         createData()
+        menuView.beginShowMenuView()
+
     }
     
     func createData() {
@@ -85,12 +86,15 @@ class ViewController: UIViewController {
         item23.name = "科目四"
         
         let certificateType = FilterModel()
+        certificateType.name = "证型"
         certificateType.model = [item00, item01, item02]
         
         let classType = FilterModel()
+        classType.name = "班型"
         classType.model = [item10, item11, item12, item13]
         
         let subject = FilterModel()
+        subject.name = "科目"
         subject.model = [item20, item21, item22, item23]
         
         var dataArr = [FilterModel]()
@@ -104,7 +108,7 @@ class ViewController: UIViewController {
     @objc func click(steper: UIStepper) {
         print("click",steper.value)
         UIView.animate(withDuration: 0.2) {
-            self.menuView.frame = .init(x: 0, y: STATUSBAR_HEIGHT! + 100 + CGFloat(steper.value)*20, width: self.view.frame.width, height: 45)
+            self.menuView.frame = .init(x: 0, y: NAV_HEIGHT + 100 + CGFloat(steper.value)*20, width: self.view.frame.width, height: 45)
         }
     }
     
@@ -117,7 +121,7 @@ class ViewController: UIViewController {
     
     @objc func click3(button: UIButton) {
         UIView.animate(withDuration: 0.2) {
-            self.menuView.frame = .init(x: 0, y: STATUSBAR_HEIGHT! + 100, width: self.view.frame.width, height: 45)
+            self.menuView.frame = .init(x: 0, y: NAV_HEIGHT, width: self.view.frame.width, height: 45)
         }
     }
 
@@ -136,7 +140,4 @@ extension ViewController: FilterMenuViewDelegate {
     func selectMenum(menuView: FilterMenuView, at index: Int) {
         // print("ViewController:点击了", menuView.titleArr[index])
     }
-    
-    
-    
 }
