@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LightFilterMenuView'
-  s.version          = '0.8.0'
-  s.summary          = '轻量筛选0..0'
+  s.version          = '0.9.0'
+  s.summary          = '轻量筛选0.9.0'
 
   # swift version
   s.swift_version = '5.0'
@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   轻量筛选轻量筛选轻量筛选轻量筛选轻量筛选轻量筛选轻量筛选轻量筛选轻量筛选轻量筛选
                        DESC
 
-  s.homepage         = 'https://github.com/wangjie0223/LightFilterMenuView'
+  s.homepage         = 'https://www.baidu.com'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'wangjie0223' => 'wangjie7629@163.com' }
