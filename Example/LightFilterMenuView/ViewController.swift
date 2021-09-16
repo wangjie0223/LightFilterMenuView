@@ -18,7 +18,6 @@ class ViewController: UIViewController {
         let menu = FilterMenuView.init(frame: .init(x: 0, y: NAV_HEIGHT, width: view.frame.width, height: 45))
         menu.backgroundColor = .white
         menu.delegate = self
-        menu.menuViewBgColor = .cyan
         return menu
     }()
     
@@ -52,6 +51,11 @@ class ViewController: UIViewController {
         view.addSubview(resetButton)
         
         createData()
+        menuView.divideLineHeight = 20
+        menuView.divideLineBgColor = .gray
+        menuView.menuButtonTitleNorColor = .darkGray
+        menuView.menuButtonTitleSelColor = .orange
+        menuView.menuButtonTitleFont = UIFont.systemFont(ofSize: 18, weight: .medium)
         menuView.beginShowMenuView()
 
     }

@@ -46,14 +46,54 @@ open class FilterMenuView: UIView {
         }
     }
     
-    public var menuViewBgColor: UIColor? {
-        set {
-            backgroundColor = newValue
-        }
-        get {
-            backgroundColor
+    public var divideLineHeight: CGFloat? {
+        didSet {
+            
         }
     }
+    
+    // 分割线颜色
+    public var divideLineBgColor: UIColor? {
+        didSet {
+            
+        }
+    }
+    
+    /// 菜单普通状态按钮颜色
+    public var menuButtonTitleNorColor: UIColor? {
+        didSet {
+            
+        }
+    }
+    
+    /// 菜单选中状态按钮颜色
+    public var menuButtonTitleSelColor: UIColor? {
+        didSet {
+            
+        }
+    }
+    
+    /// 菜单普通状态 Image
+    public var menuButtonTitleNorImage: UIImage? {
+        didSet {
+            
+        }
+    }
+    
+    /// 菜单选中状态 Image
+    public var menuButtonTitleSelImage: UIImage? {
+        didSet {
+            
+        }
+    }
+    
+    /// 菜单按钮font
+    public var menuButtonTitleFont: UIFont? {
+        didSet {
+            
+        }
+    }
+    
     
     public override init(frame: CGRect) {
         super .init(frame: frame)
@@ -72,14 +112,26 @@ open class FilterMenuView: UIView {
         for index in 0..<dataArr.count {
             let button = UIButton()
             button.setTitle(dataArr[index].name, for: .normal)
-            button.setTitleColor(.lightGray, for: .normal)
-            button.setTitleColor(.black, for: .selected)
-            button.setImage(.init(named: "slideup"), for: .normal)
-            button.setImage(.init(named: "slideupDown"), for: .selected)
+            button.setTitleColor(menuButtonTitleNorColor ?? .lightGray, for: .normal)
+            button.setTitleColor(menuButtonTitleSelColor ?? .black, for: .selected)
+            let norImage = menuButtonTitleNorImage ?? .init(named: "slideup")
+            let selImage = menuButtonTitleSelImage ?? .init(named: "slideupDown")
+            button.semanticContentAttribute = .forceRightToLeft
+            button.setImage(norImage, for: .normal)
+            button.setImage(selImage, for: .selected)
+            button.titleLabel?.font = menuButtonTitleFont ?? .systemFont(ofSize: 15, weight: .regular)
             addSubview(button)
             button.tag = index;
             let titlePositionX = buttonInterval * CGFloat(index)
+            let linePositionX = buttonInterval * CGFloat(index + 1)
+
             button.frame = .init(x: titlePositionX, y: 0, width: buttonInterval , height: frame.size.height)
+            let divideLine = UIView()
+            addSubview(divideLine)
+            divideLine.backgroundColor = divideLineBgColor ?? .black
+            let divideHeight: CGFloat = divideLineHeight ?? 0
+            print(divideHeight)
+            divideLine.frame = .init(x: linePositionX, y: (frame.size.height - divideHeight)/2, width: 1 , height: divideHeight)
             button.addTarget(self, action: #selector(menuTapped(button:)), for: .touchUpInside)
             buttonArr.append(button)
         }
