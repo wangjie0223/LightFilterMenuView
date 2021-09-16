@@ -1,5 +1,5 @@
 PODS:
-  - LightFilterMenuView (0.1.0)
+  - LightFilterMenuView (0.7.0)
 
 DEPENDENCIES:
   - LightFilterMenuView (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LightFilterMenuView: b048fdb4644492df421223ecac6129f7d51edb77
+  LightFilterMenuView: a58ef1831a2b54e61f23c233e067acef1b03bfc7
 
 PODFILE CHECKSUM: af4dfeeedbf0b94c858a12c2bda2539a0ac90142
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.11.2

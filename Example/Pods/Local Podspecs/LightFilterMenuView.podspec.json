@@ -1,8 +1,9 @@
 {
   "name": "LightFilterMenuView",
-  "version": "0.1.0",
-  "summary": "A short description of LightFilterMenuView.",
-  "description": "TODO: Add long description of the pod here.",
+  "version": "0.7.0",
+  "summary": "轻量筛选0.7.0",
+  "swift_versions": "5.0",
+  "description": "轻量筛选轻量筛选轻量筛选轻量筛选轻量筛选轻量筛选轻量筛选轻量筛选轻量筛选轻量筛选",
   "homepage": "https://github.com/wangjie0223/LightFilterMenuView",
   "license": {
     "type": "MIT",
@@ -13,10 +14,11 @@
   },
   "source": {
     "git": "https://github.com/wangjie0223/LightFilterMenuView.git",
-    "tag": "0.1.0"
+    "tag": "0.7.0"
   },
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "LightFilterMenuView/Classes/**/*"
+  "source_files": "LightFilterMenuView/Classes/**/*",
+  "swift_version": "5.0"
 }
