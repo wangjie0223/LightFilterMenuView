@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LightFilterMenuView'
-  s.version          = '0.9.0'
-  s.summary          = '轻量筛选0.9.0'
+  s.version          = '1.0.0'
+  s.summary          = '轻量筛选1.0.0'
 
   # swift version
   s.swift_version = '5.0'

@@ -2,7 +2,7 @@ import UIKit
 
 open class FilterItemModel: NSObject {
     public var name: String?
-    var id: String?
+    public var id: String?
     var isSel = false
 }
 
@@ -198,7 +198,7 @@ open class FilterMenuView: UIView {
         tableV.dataSource = self
         tableV.rowHeight = 40
         tableV.isScrollEnabled = false
-        tableV.register(UITableViewCell.self, forCellReuseIdentifier: Self.ItemCellId)
+        tableV.register(FilterTableViewCell.self, forCellReuseIdentifier: Self.ItemCellId)
         return tableV
     }()
 

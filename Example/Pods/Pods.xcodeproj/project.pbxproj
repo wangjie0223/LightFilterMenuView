@@ -11,6 +11,7 @@
 		6BDADF4EE6A6BB1CDCD6D13F23E9EFA1 /* LightFilterMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099A4305A5023C62EC954DE731AF545A /* LightFilterMenuView.swift */; };
 		757F1174FE9EE6464F91564B22AB1105 /* Pods-LightFilterMenuView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A82C7916A54A1C0C80540F00F59D0BD /* Pods-LightFilterMenuView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		797B0BBC73A6D68156781FFAF23AFBEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		8F1373B726F379F200FF9C3B /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1373B626F379F200FF9C3B /* FilterTableViewCell.swift */; };
 		9E3FB5EE419DB5F9221A623D2B60C11F /* LightFilterMenuView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 84935936CB8E35CABD1E337FBAB3ACEE /* LightFilterMenuView-dummy.m */; };
 		AA3E691627AB339673FCA34CA272ED62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		BC6020AF1B1F557FFE27BA6D4956EEF1 /* LightFilterMenuView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 936EDFA6221D2F10C06376489F3E9B49 /* LightFilterMenuView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -45,7 +46,7 @@
 		35887A3EE90533578D371FDF3078308F /* Pods-LightFilterMenuView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LightFilterMenuView_Example-dummy.m"; sourceTree = "<group>"; };
 		3E7488B8EEFE8565E280DC1DFEBD4178 /* Pods-LightFilterMenuView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LightFilterMenuView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		5A82C7916A54A1C0C80540F00F59D0BD /* Pods-LightFilterMenuView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LightFilterMenuView_Example-umbrella.h"; sourceTree = "<group>"; };
-		5F9786C30E9A884052F3BD22F00FFE13 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		5F9786C30E9A884052F3BD22F00FFE13 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		6574F2D96F5EEE21685ECCADDBB4E011 /* Pods-LightFilterMenuView_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LightFilterMenuView_Tests-Info.plist"; sourceTree = "<group>"; };
 		6BB9F7DD871ADE62A074E7FAA41D02ED /* Pods-LightFilterMenuView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LightFilterMenuView_Tests.modulemap"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -53,10 +54,11 @@
 		84935936CB8E35CABD1E337FBAB3ACEE /* LightFilterMenuView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LightFilterMenuView-dummy.m"; sourceTree = "<group>"; };
 		85E1C881205EFFE831ACD8D85110C630 /* LightFilterMenuView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LightFilterMenuView.debug.xcconfig; sourceTree = "<group>"; };
 		8A42D055F5493DF7A7357845B9357844 /* Pods-LightFilterMenuView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LightFilterMenuView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9027113DF29FF62781C582C2AD8527E2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		8F1373B626F379F200FF9C3B /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
+		9027113DF29FF62781C582C2AD8527E2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		936EDFA6221D2F10C06376489F3E9B49 /* LightFilterMenuView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LightFilterMenuView-umbrella.h"; sourceTree = "<group>"; };
 		9D2DAB53BAC24BF1761AE51E45CF2BE6 /* LightFilterMenuView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LightFilterMenuView-prefix.pch"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A787ABBC65928E92A20BF2C6B5D344FC /* Pods-LightFilterMenuView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LightFilterMenuView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C269842FB60EE86CEB9CC9B88882E144 /* Pods-LightFilterMenuView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LightFilterMenuView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		C4D5FFEBF567B135531745211A1EB671 /* Pods-LightFilterMenuView_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-LightFilterMenuView_Example"; path = Pods_LightFilterMenuView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,7 +69,7 @@
 		ED354CBC973E057C31B706D15A02D637 /* LightFilterMenuView */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LightFilterMenuView; path = LightFilterMenuView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEE055242999284A73BA28FD33000322 /* Pods-LightFilterMenuView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LightFilterMenuView_Example-frameworks.sh"; sourceTree = "<group>"; };
 		F142179D05AF3FCA977D8624E98CEBE2 /* Pods-LightFilterMenuView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LightFilterMenuView_Tests-dummy.m"; sourceTree = "<group>"; };
-		F347011474FF443BEDB45610CC597359 /* LightFilterMenuView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = LightFilterMenuView.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F347011474FF443BEDB45610CC597359 /* LightFilterMenuView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = LightFilterMenuView.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FCDC52905067AB90178C8C8C038751DD /* Pods-LightFilterMenuView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LightFilterMenuView_Example.modulemap"; sourceTree = "<group>"; };
 		FDB46282B6CD22E89BB535E8C2A96D5E /* Pods-LightFilterMenuView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LightFilterMenuView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,6 +115,7 @@
 		31B1AB08E8D7531BA529D6EF0FE0BF75 /* LightFilterMenuView */ = {
 			isa = PBXGroup;
 			children = (
+				8F1373B626F379F200FF9C3B /* FilterTableViewCell.swift */,
 				099A4305A5023C62EC954DE731AF545A /* LightFilterMenuView.swift */,
 				28ECFE5CFAFBA8893B2C1816B9B388D7 /* Pod */,
 				DB53DBD8CA8BB1BE097B7A1063F330AE /* Support Files */,
@@ -383,6 +386,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F1373B726F379F200FF9C3B /* FilterTableViewCell.swift in Sources */,
 				6BDADF4EE6A6BB1CDCD6D13F23E9EFA1 /* LightFilterMenuView.swift in Sources */,
 				9E3FB5EE419DB5F9221A623D2B60C11F /* LightFilterMenuView-dummy.m in Sources */,
 			);
@@ -654,8 +658,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
